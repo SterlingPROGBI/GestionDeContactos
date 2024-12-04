@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="img/favicon.ico" type="image/ico">
+    <title>Gestión de contactos | Contactos </title>
+    <link rel="stylesheet" href="styles/contactos.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+
+            <div class="filterEntries">
+                <div class="entries">
+                    Mostrar <select name="" id="table_size">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> entradas
+                </div>
+
+                <div class="filter">
+                    <label for="search">Buscar:</label>
+                    <input type="search" name="" id="search" placeholder="Ingrese Nombre/Ciudad/Posición">
+                </div>
+            </div>
+
+            <div class="addContactBtn">
+                <button>Nuevo contacto</button>
+            </div>
+
+        </header>
+
+        <table>
+
+            <thead>
+                <tr class="heading">
+                    <th>ID</th>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Ciudad</th>
+                    <th>Posición</th>
+                    <th>Salario</th>
+                    <th>Fecha de inicio</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody class="userInfo">
+                <!-- Aquí irán los datos de los contactos -->
+            </tbody>
+
+        </table>
+
+        <footer>
+            <span class="showEntries">Mostrando 1 a 10 de 50 entradas</span>
+            <div class="pagination">
+                <!-- Paginación -->
+            </div>
+        </footer>
+    </div>
+
+    <!--Popup Form-->
+    <div class="dark_bg">
+        <div class="popup">
+             <header>
+                <h2 class="modalTitle">Completa el formulario</h2>
+                <button class="closeBtn">&times;</button>
+             </header>
+
+             <div class="body">
+                <form action="#" id="myForm">
+                    <div class="imgholder">
+                        <label for="uploadimg" class="upload">
+                            <input type="file" name="" id="uploadimg" class="picture">
+                            <i class="fa-solid fa-plus"></i>
+                        </label>
+                        <img src="./img/pic1.png" alt="" width="150" height="150" class="img">
+                    </div>
+
+                    <div class="inputFieldContainer">
+                        <div class="nameField">
+                            <div class="form_control">
+                                <label for="fName">Nombre:</label>
+                                <input type="text" name="" id="fName" required>
+                            </div>
+                            <div class="form_control">
+                                <label for="lName">Apellido:</label>
+                                <input type="text" name="" id="lName" required>
+                            </div>
+                        </div>
+                        <div class="ageCityField">
+                            <div class="form_control">
+                                <label for="age">Edad:</label>
+                                <input type="number" name="" id="age" required>
+                            </div>
+                            <div class="form_control">
+                                <label for="city">Ciudad:</label>
+                                <input type="text" name="" id="city" required>
+                            </div>
+                        </div>
+                        <div class="postSalary">
+                            <div class="form_control">
+                                <label for="position">Posición:</label>
+                                <input type="text" name="" id="position" required>
+                            </div>
+                            <div class="form_control">
+                                <label for="salary">Salario:</label>
+                                <input type="text" name="" id="salary" required>
+                            </div>
+                        </div>
+                        <div class="form_control">
+                            <label for="sDate">Fecha de inicio:</label>
+                            <input type="text" name="" id="sDate" required>
+                        </div>
+                        <div class="form_control">
+                            <label for="email">Email:</label>
+                            <input type="email" name="" id="email" required>
+                        </div>
+                        <div class="form_control">
+                            <label for="phone">Teléfono:</label>
+                            <input type="number" name="" id="phone" required>
+                        </div>
+                    </div>
+                </form>
+             </div>
+
+             <footer class="popupFooter">
+                <button form="myForm" class="submitBtn">Enviar</button>
+             </footer>
+        </div>
+    </div>
+
+    <script src="js/contactos.js"></script>
+</body>
+</html>
